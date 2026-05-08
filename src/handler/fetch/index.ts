@@ -1,7 +1,7 @@
 import type { IRequest, RouterType } from 'itty-router';
 import type { AddressListStoreKey } from '../../db';
 import type { Environment } from '../../types';
-import { validate } from '@telegram-apps/init-data-node/web';
+import { validate } from '@tma.js/init-data-node/web';
 import { json, Router } from 'itty-router';
 import { Dao } from '../../db';
 import { createTelegramBotAPI, telegramCommands, telegramWebhookHandler, tmaHTML } from '../../telegram';

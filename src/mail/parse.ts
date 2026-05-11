@@ -27,7 +27,7 @@ function truncateStream(stream: ReadableStream<Uint8Array>, maxBytes: number): R
     return stream.pipeThrough(tran);
 }
 
-export async function parseEmail(message: ForwardableEmailMessage, maxSize: number, maxSizePolicy: MaxEmailSizePolicy, useEmlHeaders: boolean = false): Promise<EmailCache> {
+export async function parseEmail(message: ForwardableEmailMessage, maxSize: number, maxSizePolicy: MaxEmailSizePolicy, useEmlHeaders: boolean = true): Promise<EmailCache> {
     const id = crypto.randomUUID();
     const cache: EmailCache = {
         id,
